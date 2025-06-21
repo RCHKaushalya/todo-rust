@@ -1,0 +1,67 @@
+*🧱 Primitive Scalar Types*
+These hold single values.
+
+- `i8`, `i16`, `i32`, `i64`, `i128`, `isize` → Signed integers
+- `u8`, `u16`, `u32`, `u64`, `u128`, `usize` → Unsigned integers
+- `f32`, `f64` → Floating point numbers
+- `char` → A single Unicode character (`'a'`, `'π'`, `'🚀'`)
+- `bool` → `true` or `false`
+
+---
+
+*🧱 Primitive Compound Types*
+These group multiple values together.
+
+- *Tuple*: `(i32, f64, char)` — fixed-size, heterogenous
+- *Array*: `[i32; 3]` — fixed-size, same type
+
+---
+
+*📦 Standard Library Types*
+These are heap-allocated and flexible.
+
+- `String` → Growable, owned, heap-allocated string
+- `&str` → String slice (usually borrowed from a `String`)
+- `Vec<T>` → Growable list of values
+- `Option<T>` → Either `Some(value)` or `None`
+- `Result<T, E>` → For error handling: `Ok(value)` or `Err(error)`
+- `Box<T>` → Heap allocation for single values
+- `Rc<T>` → Reference-counted pointer (shared ownership)
+- `Arc<T>` → Atomic reference-counted pointer (thread-safe)
+- `HashMap<K, V>` → Key-value dictionary
+- `HashSet<T>` → Collection of unique values
+
+---
+
+*👤 User-Defined Types*
+You can create your own types using:
+
+- `struct` → Custom data structures
+- `enum` → Custom enums like `enum Direction { North, South}`
+- `union` → Unsafe, overlapping memory layout for multiple fields
+- `type` → Type aliases (`type Kilometers = i32`)
+
+---
+
+*📚 Trait Types*
+Traits define shared behavior and are used with generics:
+
+- Built-in traits like `Copy`, `Clone`, `Debug`, `PartialEq`, `Drop`, etc.
+- Custom traits: `trait Speak { fn speak(&self);}`
+
+---
+
+*🧙‍♂️ Function Types & Closures*
+You can use:
+
+- Function pointers: `fn(i32) -> i32`
+- Closures: `let add = |x, y| x + y;`
+
+---
+
+*🦺 Smart Pointer/Concurrency Types*
+For advanced memory and thread control:
+
+- `RefCell<T>` and `Cell<T>` — runtime-checked borrowing
+- `Mutex<T>`, `RwLock<T>` — thread-safe interior mutability
+- `Atomic*` — low-level atomics (e.g., `AtomicUsize`)
