@@ -19,7 +19,7 @@ This project is designed to explore Rust’s ownership model, file I/O, JSON ser
 Clone the repo and build it with Cargo:
 
 bash
-git clone https://github.com/YOUR_USERNAME/todo-rust
+git clone https://github.com/RCHKaushalya/todo-rust
 cd todo-rust
 cargo build
 
